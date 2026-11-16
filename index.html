@@ -4,231 +4,268 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bad Creature | Space Grunge</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+<title>Bad Creature | Cosmic Noise from Portland, OR</title>
 
 <style>
 
 :root{
- --blue:#35b9ff;
- --black:#050505;
- --gray:#1a1a1a;
- --text:#f2f2f2;
+--blue:#35b9ff;
+--black:#050505;
+--card:#121212;
+--text:#f5f5f5;
 }
 
 *{
- margin:0;
- padding:0;
- box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
- background:var(--black);
- color:var(--text);
- font-family:Inter,sans-serif;
-}
-
-.hero{
- min-height:100vh;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- text-align:center;
- padding:40px;
+background:var(--black);
+color:var(--text);
+font-family:Arial, sans-serif;
 }
 
 .logo{
- width:320px;
- max-width:80%;
- margin-bottom:30px;
+width:250px;
+max-width:80%;
+margin:25px auto;
+display:block;
+}
+
+.hero{
+padding:30px;
+text-align:center;
 }
 
 h1{
- font-size:clamp(3rem,8vw,6rem);
- font-weight:900;
- letter-spacing:4px;
+font-size:3rem;
+letter-spacing:4px;
 }
 
 .tagline{
- color:var(--blue);
- font-size:1.25rem;
- margin:20px 0;
- letter-spacing:3px;
-}
-
-.buttons{
- display:flex;
- flex-wrap:wrap;
- gap:15px;
- justify-content:center;
- margin-top:30px;
-}
-
-.btn{
- text-decoration:none;
- padding:14px 28px;
- border-radius:50px;
- font-weight:700;
- transition:.3s;
-}
-
-.spotify{
- background:#1DB954;
- color:white;
-}
-
-.instagram{
- background:var(--blue);
- color:black;
-}
-
-.btn:hover{
- transform:translateY(-3px);
-}
-
-section{
- padding:80px 10%;
- max-width:1200px;
- margin:auto;
-}
-
-h2{
- font-size:2rem;
- margin-bottom:25px;
- color:var(--blue);
-}
-
-.about{
- text-align:center;
- font-size:1.1rem;
- max-width:700px;
- margin:auto;
- line-height:1.8;
+color:var(--blue);
+margin-top:10px;
+margin-bottom:30px;
+font-size:1.1rem;
 }
 
 .album{
- width:100%;
- max-width:400px;
- display:block;
- margin:40px auto;
- border-radius:20px;
+width:100%;
+max-width:350px;
+display:block;
+margin:25px auto;
+border-radius:15px;
 }
 
-.band-photo{
- width:100%;
- border-radius:20px;
- margin-top:20px;
+.section{
+max-width:700px;
+margin:auto;
+padding:20px;
+}
+
+.button{
+display:block;
+width:100%;
+text-align:center;
+padding:18px;
+margin:12px 0;
+background:var(--card);
+border:1px solid #222;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+transition:.3s;
+}
+
+.button:hover{
+background:var(--blue);
+color:black;
+}
+
+.menu-button{
+position:fixed;
+top:20px;
+right:20px;
+font-size:30px;
+cursor:pointer;
+color:var(--blue);
+z-index:1001;
+}
+
+.menu{
+position:fixed;
+top:0;
+right:-300px;
+width:300px;
+height:100%;
+background:#101010;
+padding:40px 20px;
+transition:.4s;
+z-index:1000;
+}
+
+.menu.active{
+right:0;
+}
+
+.menu a{
+display:block;
+padding:15px 0;
+color:white;
+text-decoration:none;
+font-size:1.2rem;
+border-bottom:1px solid #222;
+}
+
+.menu h2{
+color:var(--blue);
+margin-bottom:25px;
+}
+
+.release-title{
+text-align:center;
+color:var(--blue);
+font-size:1.5rem;
+margin-top:20px;
+}
+
+.small-title{
+text-align:center;
+font-size:1rem;
+letter-spacing:2px;
+margin-top:20px;
+margin-bottom:10px;
+color:#aaa;
 }
 
 footer{
- text-align:center;
- padding:60px 20px;
- border-top:1px solid #222;
- margin-top:80px;
-}
-
-footer a{
- color:var(--blue);
- text-decoration:none;
- margin:0 10px;
+text-align:center;
+padding:40px;
+color:#666;
 }
 
 </style>
 </head>
+
 <body>
 
-<section class="hero">
+<div class="menu-button" onclick="toggleMenu()">
+☰
+</div>
 
-<img src="IMG_4930.png" class="logo">
+<div class="menu" id="menu">
+
+<h2>MENU</h2>
+
+<a href="booking.html">Booking</a>
+<a href="presskit.html">Press Kit</a>
+<a href="mailto:badxcreature@gmail.com">Contact</a>
+
+</div>
+
+<div class="hero">
+
+<img class="logo" src="IMG_4930.png">
 
 <h1>BAD CREATURE</h1>
 
-<p class="tagline">SPACE GRUNGE</p>
+<div class="tagline">
+Cosmic Noise from Portland, OR
+</div>
 
-<div class="buttons">
-<a class="btn spotify"
-href="https://open.spotify.com/artist/0sbADQzOD2qyvTb2bUmYLc?si=e4CN9URiStWT-njJ6BHUNQ&utm\_source=copy-link"
+</div>
+
+<div class="section">
+
+<div class="small-title">
+FEATURED RELEASE
+</div>
+
+<div class="release-title">
+DEAD RADIO
+</div>
+
+<img class="album"
+src="5833ECA3-E1C0-4980-932C-92D17918C82A.jpeg">
+
+<a class="button"
+href="https://open.spotify.com/album/2oeOzUpu4JYWD9ovbaKWX6?si=cIYZdUH\_ThOPaziBmQ9s8w&utm\_source=copy-link"
 target="_blank">
-Listen on Spotify
+🎵 Listen on Spotify
 </a>
 
-<a class="btn instagram"
+<a class="button"
+href="https://badcreature.bandcamp.com/album/dead-radio"
+target="_blank">
+💿 Buy on Bandcamp
+</a>
+
+<div class="small-title">
+FOLLOW
+</div>
+
+<a class="button"
 href="https://www.instagram.com/badxcreature"
 target="_blank">
-Instagram
-</a>
-</div>
-
-</section>
-
-<section>
-
-<h2>About</h2>
-
-<div class="about">
-Bad Creature is a Portland-based space grunge trio blending heavy grooves,
-melodic atmospheres, and cosmic themes into a sound that's both familiar and
-completely alien.
-</div>
-
-</section>
-
-<section>
-
-<h2>Latest Release</h2>
-
-<img src="5833ECA3-E1C0-4980-932C-92D17918C82A.jpeg"
-class="album">
-
-</section>
-
-<section>
-
-<h2>Live</h2>
-
-<img src="IMG_9080.jpeg"
-class="band-photo">
-
-</section>
-
-<section>
-<h2>Stream Music</h2>
-
-<iframe
-style="border-radius:12px"
-src="https://open.spotify.com/embed/artist/0sbADQzOD2qyvTb2bUmYLc"
-width="100%"
-height="352"
-frameBorder="0"
-allowfullscreen=""
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-</iframe>
-
-</section>
-
-<footer>
-
-<p>
-<a href="https://badcreature.com">badcreature.com\</a>
-</p>
-
-<br>
-
-<p>
-<a href="https://www.instagram.com/badxcreature">
-Instagram
+📸 Instagram
 </a>
 
-|
+<a class="button"
+href="https://youtube.com/@badxcreature?si=seEpil7LY\_dzGn7E"
+target="_blank">
+🎥 YouTube
+</a>
 
-<a href="https://open.spotify.com/artist/0sbADQzOD2qyvTb2bUmYLc">
+<a class="button"
+href="https://www.tiktok.com/@badxcreature?\_r=1&\_t=ZP-9BSTtfoSLQV"
+target="_blank">
+🎵 TikTok
+</a>
+
+<a class="button"
+href="https://www.facebook.com/share/18pbP9WwQ5/?mibextid=wwXIfr"
+target="_blank">
+👍 Facebook
+</a>
+
+<div class="small-title">
+STREAM
+</div>
+
+<a class="button"
+href="https://open.spotify.com/artist/0sbADQzOD2qyvTb2bUmYLc?si=e4CN9URiStWT-njJ6BHUNQ&utm\_source=copy-link"
+target="_blank">
 Spotify
 </a>
-</p>
 
+<a class="button"
+href="https://music.apple.com/us/artist/bad-creature/1652152954"
+target="_blank">
+Apple Music
+</a>
+
+<a class="button"
+href="https://badcreature.bandcamp.com/album/dead-radio"
+target="_blank">
+Bandcamp
+</a>
+
+</div>
+
+<footer>
+BAD CREATURE
 </footer>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+</script>
 
 </body>
 </html>
