@@ -28,9 +28,9 @@ font-family:Arial, sans-serif;
 }
 
 .logo{
-width:250px;
+width:260px;
 max-width:80%;
-margin:25px auto;
+margin:30px auto;
 display:block;
 }
 
@@ -57,6 +57,7 @@ max-width:350px;
 display:block;
 margin:25px auto;
 border-radius:15px;
+box-shadow:0 0 30px rgba(53,185,255,.15);
 }
 
 .section{
@@ -66,9 +67,11 @@ padding:20px;
 }
 
 .button{
-display:block;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:14px;
 width:100%;
-text-align:center;
 padding:18px;
 margin:12px 0;
 background:var(--card);
@@ -85,11 +88,18 @@ background:var(--blue);
 color:black;
 }
 
+.button img{
+width:24px;
+height:24px;
+filter:invert(1);
+flex-shrink:0;
+}
+
 .menu-button{
 position:fixed;
 top:20px;
 right:20px;
-font-size:30px;
+font-size:32px;
 cursor:pointer;
 color:var(--blue);
 z-index:1001;
@@ -103,8 +113,9 @@ width:300px;
 height:100%;
 background:#101010;
 padding:40px 20px;
-transition:.4s;
+transition:.35s;
 z-index:1000;
+box-shadow:-5px 0 25px rgba(0,0,0,.4);
 }
 
 .menu.active{
@@ -116,7 +127,7 @@ display:block;
 padding:15px 0;
 color:white;
 text-decoration:none;
-font-size:1.2rem;
+font-size:1.1rem;
 border-bottom:1px solid #222;
 }
 
@@ -136,15 +147,16 @@ margin-top:20px;
 text-align:center;
 font-size:1rem;
 letter-spacing:2px;
-margin-top:20px;
+margin-top:25px;
 margin-bottom:10px;
-color:#aaa;
+color:#888;
 }
 
 footer{
 text-align:center;
 padding:40px;
 color:#666;
+font-size:.9rem;
 }
 
 </style>
@@ -168,7 +180,7 @@ color:#666;
 
 <div class="hero">
 
-<img class="logo" src="IMG_4930.png">
+<img class="logo" src="IMG_4930.png" alt="Bad Creature Logo">
 
 <h1>BAD CREATURE</h1>
 
@@ -189,18 +201,25 @@ DEAD RADIO
 </div>
 
 <img class="album"
-src="5833ECA3-E1C0-4980-932C-92D17918C82A.jpeg">
+src="5833ECA3-E1C0-4980-932C-92D17918C82A.jpeg"
+alt="Dead Radio Album Artwork">
 
 <a class="button"
 href="https://open.spotify.com/album/2oeOzUpu4JYWD9ovbaKWX6?si=cIYZdUH\_ThOPaziBmQ9s8w&utm\_source=copy-link"
 target="_blank">
-🎵 Listen on Spotify
+
+<img src="icons/spotify.svg" alt="Spotify">
+<span>Listen on Spotify</span>
+
 </a>
 
 <a class="button"
 href="https://badcreature.bandcamp.com/album/dead-radio"
 target="_blank">
-💿 Buy on Bandcamp
+
+<img src="icons/bandcamp.svg" alt="Bandcamp">
+<span>Buy on Bandcamp</span>
+
 </a>
 
 <div class="small-title">
@@ -210,25 +229,37 @@ FOLLOW
 <a class="button"
 href="https://www.instagram.com/badxcreature"
 target="_blank">
-📸 Instagram
+
+<img src="icons/instagram.svg" alt="Instagram">
+<span>Instagram</span>
+
 </a>
 
 <a class="button"
 href="https://youtube.com/@badxcreature?si=seEpil7LY\_dzGn7E"
 target="_blank">
-🎥 YouTube
+
+<img src="icons/youtube.svg" alt="YouTube">
+<span>YouTube</span>
+
 </a>
 
 <a class="button"
-href="https://www.tiktok.com/@badxcreature?\_r=1&\_t=ZP-9BSTtfoSLQV"
+href="https://www.tiktok.com/@badcreature?\_r=1&\_t=ZP-9BSTtfoSLQV"
 target="_blank">
-🎵 TikTok
+
+<img src="icons/tiktok.svg" alt="TikTok">
+<span>TikTok</span>
+
 </a>
 
 <a class="button"
 href="https://www.facebook.com/share/18pbP9WwQ5/?mibextid=wwXIfr"
 target="_blank">
-👍 Facebook
+
+<img src="icons/facebook.svg" alt="Facebook">
+<span>Facebook</span>
+
 </a>
 
 <div class="small-title">
@@ -238,19 +269,28 @@ STREAM
 <a class="button"
 href="https://open.spotify.com/artist/0sbADQzOD2qyvTb2bUmYLc?si=e4CN9URiStWT-njJ6BHUNQ&utm\_source=copy-link"
 target="_blank">
-Spotify
+
+<img src="icons/spotify.svg" alt="Spotify">
+<span>Spotify</span>
+
 </a>
 
 <a class="button"
 href="https://music.apple.com/us/artist/bad-creature/1652152954"
 target="_blank">
-Apple Music
+
+<img src="icons/applemusic.svg" alt="Apple Music">
+<span>Apple Music</span>
+
 </a>
 
 <a class="button"
 href="https://badcreature.bandcamp.com/album/dead-radio"
 target="_blank">
-Bandcamp
+
+<img src="icons/bandcamp.svg" alt="Bandcamp">
+<span>Bandcamp</span>
+
 </a>
 
 </div>
